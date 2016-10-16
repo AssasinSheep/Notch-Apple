@@ -24,8 +24,8 @@ ItemStack GodApple = new ItemStack(Material.GOLDEN_APPLE, 1, (short)1);
 
 ShapedRecipe recipe = new ShapedRecipe(GodApple);
 recipe.shape("###",
-		     "#@#",
-		     "###");
+             "#@#",
+             "###");
 
 recipe.setIngredient('#', Material.GOLD_BLOCK);
 recipe.setIngredient('@', Material.APPLE);
