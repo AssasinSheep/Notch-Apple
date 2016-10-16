@@ -1,0 +1,35 @@
+package recipe;
+
+import org.bukkit.Material;
+import org.bukkit.event.Listener;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.ShapedRecipe;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class GodApple extends JavaPlugin implements Listener{
+
+
+public void onEnable() {
+	getServer().getPluginManager().registerEvents(this, this);
+	makeGodApple();
+}
+public void onDisable() {
+}
+
+
+private void makeGodApple() {
+	
+
+ItemStack GodApple = new ItemStack(Material.GOLDEN_APPLE, 1, (short)1);
+
+ShapedRecipe recipe = new ShapedRecipe(GodApple);
+recipe.shape("###",
+		     "#@#",
+		     "###");
+
+recipe.setIngredient('#', Material.GOLD_BLOCK);
+recipe.setIngredient('@', Material.APPLE);
+
+getServer().addRecipe(recipe);
+}
+}
